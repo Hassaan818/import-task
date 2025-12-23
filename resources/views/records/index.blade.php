@@ -3,6 +3,16 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Records
         </h2>
+        <div class="text-end mb-4">
+            <form action="{{ route('records.export') }}" method="POST" class="inline-block">
+                @csrf
+                <input type="email" name="email" placeholder="Enter your email" required
+                    class="px-2 py-1 border rounded mr-2">
+                <button type="submit" class="px-4 py-2 bg-black text-white rounded">
+                    Export All Records
+                </button>
+            </form>
+        </div>
     </x-slot>
 
     <div class="py-6">
@@ -19,6 +29,9 @@
                 {{ session('error') }}
             </div>
             @endif
+
+
+
 
 
 

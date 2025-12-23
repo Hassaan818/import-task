@@ -34,7 +34,7 @@
                     <input type="text" name="sheet_id" id="sheet_id" placeholder="Sheet ID" class="border p-2 mb-4 w-full">
                     <input type="text" name="file_id" id="file_id" placeholder="File ID" class="border p-2 mb-4 w-full">
 
-                    <button type="submit" class="px-4 py-2 bg-black text-black border border-black rounded">Import CSV</button>
+                    <button type="submit" class="px-4 py-2 bg-black text-white border border-black rounded">Import CSV</button>
                 </form>
 
             </div>

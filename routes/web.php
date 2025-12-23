@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\GoogleAuthController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ImportController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecordController;
@@ -27,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/records/import', [ImportController::class, 'import'])->name('records.import');
 
     Route::get('/imports', [ImportController::class, 'getImports'])->name('import.index');
+    Route::post('/records/export', [ExportController::class, 'export'])->name('records.export');
 });
 
 Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])
